@@ -1,0 +1,15 @@
+## Interface: 20400
+
+## Title: tekticles
+## Notes: Simple font replacement
+## Author: Tekkub Stoutwrithe
+## Version: Alpha
+## X-Website: http://www.tekkub.net/
+## X-Email: tekkub-wow@googlegroups.com
+## X-Credits: ClearFont2 by Kirkburn
+## X-Category: Interface Enhancements
+
+## LoadManagers: AddonLoader
+## X-LoadOn-Always: delayed
+
+tekticles.lua
