@@ -11,11 +11,11 @@ end
 local f = CreateFrame("Frame")
 f:RegisterEvent("ADDON_LOADED")
 f:SetScript("OnEvent", function()
-	local NORMAL     = "Interface\\AddOns\\ClearFont2\\Calibri.ttf"
-	local BOLD       = "Interface\\AddOns\\ClearFont2\\CalibriBold.ttf"
-	local BOLDITALIC = "Interface\\AddOns\\ClearFont2\\CalibriBoldItalic.ttf"
-	local ITALIC     = "Interface\\AddOns\\ClearFont2\\CalibriItalic.ttf"
-	local NUMBER     = "Interface\\AddOns\\ClearFont2\\CalibriBold.ttf"
+	local NORMAL     = "Interface\\AddOns\\tekticles\\Calibri.ttf"
+	local BOLD       = "Interface\\AddOns\\tekticles\\CalibriBold.ttf"
+	local BOLDITALIC = "Interface\\AddOns\\tekticles\\CalibriBoldItalic.ttf"
+	local ITALIC     = "Interface\\AddOns\\tekticles\\CalibriItalic.ttf"
+	local NUMBER     = "Interface\\AddOns\\tekticles\\CalibriBold.ttf"
 
 	UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT = 12
 	CHAT_FONT_HEIGHTS = {7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24}
