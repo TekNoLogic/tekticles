@@ -83,3 +83,12 @@ f:SetScript("OnEvent", function()
 		f:SetFont(NORMAL, size)
 	end
 end)
+
+
+local LSM = LibStub:GetLibrary("LibSharedMedia-3.0", true)
+if LSM then
+	LSM:Register(LSM.MediaType.FONT, "Calibri", "Interface\\AddOns\\tekticles\\Calibri.ttf")
+	LSM:Register(LSM.MediaType.FONT, "Calibri Bold", "Interface\\AddOns\\tekticles\\CalibriBold.ttf")
+	LSM:Register(LSM.MediaType.FONT, "Calibri Bold Italic", "Interface\\AddOns\\tekticles\\CalibriBoldItalic.ttf")
+	LSM:Register(LSM.MediaType.FONT, "Calibri Italic", "Interface\\AddOns\\tekticles\\CalibriItalic.ttf")
+end

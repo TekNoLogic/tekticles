@@ -12,4 +12,6 @@
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Always: delayed
 
+## OptionalDeps: LibSharedMedia-3.0
+
 tekticles.lua
