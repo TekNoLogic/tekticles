@@ -25,6 +25,7 @@ f:SetScript("OnEvent", function()
 	DAMAGE_TEXT_FONT   = NUMBER
 	STANDARD_TEXT_FONT = NORMAL
 
+	SetFont(BossEmoteNormalHuge,     BOLDITALIC, 27, "THICKOUTLINE")
 	SetFont(ChatFontNormal,              NORMAL, 14)
 	SetFont(ChatFontSmall,               NORMAL, 12)
 	SetFont(CombatTextFont,              NORMAL, 26)
