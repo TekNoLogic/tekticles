@@ -1,0 +1,10 @@
+2.4.2.3-Beta
+    Apply font to BossEmoteNormalHuge
+
+2.4.1.2-Beta
+    Register fonts with LMS3, if present
+
+2.4.1.1-Beta
+    Fix them thar font paths
+    And so it begins...
+
