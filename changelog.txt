@@ -1,3 +1,6 @@
+2.4.2.4-Beta
+    Fix for people who don't have LibStub (that's possible?)
+
 2.4.2.3-Beta
     Apply font to BossEmoteNormalHuge
 
