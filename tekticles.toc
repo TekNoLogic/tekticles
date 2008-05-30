@@ -3,7 +3,7 @@
 ## Title: tekticles
 ## Notes: Simple font replacement
 ## Author: Tekkub Stoutwrithe
-## Version: Alpha
+## Version: 2.4.2.4
 ## X-Website: http://www.tekkub.net/
 ## X-Email: tekkub-wow@googlegroups.com
 ## X-Credits: ClearFont2 by Kirkburn
