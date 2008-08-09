@@ -1,3 +1,6 @@
+3.0.1.5-Beta
+    Remove fonts that are gone in Wrath
+
 2.4.2.4-Beta
     Fix for people who don't have LibStub (that's possible?)
 
