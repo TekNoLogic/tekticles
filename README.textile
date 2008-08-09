@@ -1,9 +1,0 @@
-tekticles is a simple set of fonts, derived from ClearFont2.
-I only ever used one set of fonts from CF2 (the "Calibri":http://en.wikipedia.org/wiki/Calibri set),
-so I ripped CF2 down to it's bear ass and stripped off all the extra crap.  This addon is what's left.
-
-h2. Links
-
-<b>Visit "my site":http://www.tekkub.net/addons/tekticles for more info<br>
-Please report all bugs and feature requests to my "Google Code":http://code.google.com/p/tekkub-wow/issues/list?can=1&q=addon:tekticles&sort=status+milestone&colspec=ID%20Type%20Status%20Addon%20Milestone%20Summary tracker<br>
-Please direct all feedback and questions to my "Google Groups":http://groups-beta.google.com/group/tekkub-wow mailinglist</b>
