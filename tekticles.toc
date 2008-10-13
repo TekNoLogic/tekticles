@@ -14,4 +14,8 @@
 
 ## OptionalDeps: LibSharedMedia-3.0
 
+tekKonfigHeading.lua
+tekKonfigGroup.lua
+
 tekticles.lua
+sample.lua
