@@ -107,3 +107,5 @@ frame:SetScript("OnShow", function(self)
 end)
 
 InterfaceOptions_AddCategory(frame)
+
+LibStub("tekKonfig-AboutPanel").new("tekticles", "tekticles")
