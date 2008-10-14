@@ -17,6 +17,7 @@
 tekKonfigAboutPanel.lua
 tekKonfigHeading.lua
 tekKonfigGroup.lua
+tekKonfigScroll.lua
 
 tekticles.lua
 sample.lua

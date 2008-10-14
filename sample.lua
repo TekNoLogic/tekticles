@@ -23,15 +23,21 @@ frame:SetScript("OnShow", function(self)
 	frame:SetPoint("RIGHT")
 	frame:SetHeight(1000)
 
-	local LINEHEIGHT, MAXOFFSET = 50, -550
+	local scrollbar, upbutt, downbutt = LibStub("tekKonfig-Scroll").new(group, 6)
+	scrollbar:SetMinMaxValues(0,550)
+	scrollbar:SetValue(0)
+
+	local f = scrollbar:GetScript("OnValueChanged")
+	scrollbar:SetScript("OnValueChanged", function(self, value, ...)
+		scroll:SetVerticalScroll(value)
+		frame:SetPoint("TOP", 0, value)
+		return f(self, value, ...)
+	end)
+
 	local offset = 0
 	scroll:UpdateScrollChildRect()
 	scroll:EnableMouseWheel(true)
-	scroll:SetScript("OnMouseWheel", function(self, val)
-		offset = math.max(math.min(offset + val*LINEHEIGHT, 0), MAXOFFSET)
-		self:SetVerticalScroll(-offset)
-		frame:SetPoint("TOP", 0, offset)
-	end)
+	scroll:SetScript("OnMouseWheel", function(self, val) scrollbar:SetValue(scrollbar:GetValue() - val*50) end)
 
 	local last
 	local fonts, needbackground = {
