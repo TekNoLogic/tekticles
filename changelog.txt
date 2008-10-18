@@ -1,3 +1,8 @@
+3.0.2.6-Beta
+    Convert everything to Blizzy's new base fonts.  I don't know why they made these... meh
+    Add about panel
+    Add preview panel
+
 3.0.1.5-Beta
     Remove fonts that are gone in Wrath
 
