@@ -1,3 +1,7 @@
+3.0.3.7-Beta
+    Missed SystemFont_Shadow_Huge3
+    Missed SystemFont_Small
+
 3.0.2.6-Beta
     Convert everything to Blizzy's new base fonts.  I don't know why they made these... meh
     Add about panel
