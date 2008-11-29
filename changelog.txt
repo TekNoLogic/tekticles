@@ -1,3 +1,6 @@
+3.0.3.8-Beta
+    ReputationDetailFont doesn't inherit anymore, ugheth
+
 3.0.3.7-Beta
     Missed SystemFont_Shadow_Huge3
     Missed SystemFont_Small
