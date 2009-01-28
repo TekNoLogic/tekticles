@@ -14,6 +14,7 @@
 
 ## OptionalDeps: LibSharedMedia-3.0
 
+LibStub.lua
 tekKonfigAboutPanel.lua
 tekKonfigHeading.lua
 tekKonfigGroup.lua
