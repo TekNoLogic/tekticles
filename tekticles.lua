@@ -74,6 +74,10 @@ f:SetScript("OnEvent", function()
 		local font, size = f:GetFont()
 		f:SetFont(NORMAL, size)
 	end
+
+	local function FixTitleFont() for _,butt in pairs(PlayerTitlePickerScrollFrame.buttons) do butt.text:SetFontObject(GameFontHighlightSmallLeft) end end
+	hooksecurefunc("PlayerTitleFrame_UpdateTitles", FixTitleFont)
+	FixTitleFont()
 end)
 
 
