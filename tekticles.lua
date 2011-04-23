@@ -79,9 +79,14 @@ f:SetScript("OnEvent", function()
 		f:SetFont(NORMAL, size)
 	end
 
-	local function FixTitleFont() for _,butt in pairs(PlayerTitlePickerScrollFrame.buttons) do butt.text:SetFontObject(GameFontHighlightSmallLeft) end end
-	hooksecurefunc("PlayerTitleFrame_UpdateTitles", FixTitleFont)
-	FixTitleFont()
+	local _, _, _, toc = GetBuildInfo()
+	if toc < 40100 then
+		local function FixTitleFont() for _,butt in pairs(PlayerTitlePickerScrollFrame.buttons) do butt.text:SetFontObject(GameFontHighlightSmallLeft) end end
+		hooksecurefunc("PlayerTitleFrame_UpdateTitles", FixTitleFont)
+		FixTitleFont()
+	else
+		for _,butt in pairs(PaperDollTitlesPane.buttons) do butt.text:SetFontObject(GameFontHighlightSmallLeft) end
+	end
 end)
 
 
