@@ -15,7 +15,7 @@ f:SetScript("OnEvent", function()
 	local BOLD       = "Interface\\AddOns\\tekticles\\CalibriBold.ttf"
 	local BOLDITALIC = "Interface\\AddOns\\tekticles\\CalibriBoldItalic.ttf"
 	local ITALIC     = "Interface\\AddOns\\tekticles\\CalibriItalic.ttf"
-	local NUMBER     = "Interface\\AddOns\\tekticles\\CalibriBold.ttf"
+	local NUMBER     = [[Interface\AddOns\SharedMediaAdditionalFonts\fonts\AccidentalPresidency.ttf]]
 
 	UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT = 12
 	CHAT_FONT_HEIGHTS = {7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24}
@@ -90,6 +90,7 @@ f:SetScript("OnEvent", function()
 end)
 
 
+--[[
 local LSM = LibStub and LibStub:GetLibrary("LibSharedMedia-3.0", true)
 if LSM then
 	LSM:Register(LSM.MediaType.FONT, "Calibri", "Interface\\AddOns\\tekticles\\Calibri.ttf")
@@ -97,3 +98,4 @@ if LSM then
 	LSM:Register(LSM.MediaType.FONT, "Calibri Bold Italic", "Interface\\AddOns\\tekticles\\CalibriBoldItalic.ttf")
 	LSM:Register(LSM.MediaType.FONT, "Calibri Italic", "Interface\\AddOns\\tekticles\\CalibriItalic.ttf")
 end
+]]--
