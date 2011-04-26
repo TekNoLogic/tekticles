@@ -87,14 +87,7 @@ f:SetScript("OnEvent", function()
 		-- function f:SetFont(...) error("Attempt to set font on ChannelButton"..i) end
 	end
 
-	local _, _, _, toc = GetBuildInfo()
-	if toc < 40100 then
-		local function FixTitleFont() for _,butt in pairs(PlayerTitlePickerScrollFrame.buttons) do butt.text:SetFontObject(GameFontHighlightSmallLeft) end end
-		hooksecurefunc("PlayerTitleFrame_UpdateTitles", FixTitleFont)
-		FixTitleFont()
-	else
-		for _,butt in pairs(PaperDollTitlesPane.buttons) do butt.text:SetFontObject(GameFontHighlightSmallLeft) end
-	end
+	for _,butt in pairs(PaperDollTitlesPane.buttons) do butt.text:SetFontObject(GameFontHighlightSmallLeft) end
 end)
 
 
