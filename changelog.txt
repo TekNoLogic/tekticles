@@ -1,3 +1,7 @@
+4.1.0.12-Beta
+    Fix channel list buttons not getting fonts
+    Fix title picker buttons in 4.1
+
 3.3.0.11-Release
     Seems that the friends frame defined its own fonts, ugh
 
