@@ -78,6 +78,14 @@ f:SetScript("OnEvent", function()
 	SetFont(QuestFontNormalSmall,          BOLD, 13, nil, nil, nil, nil, 0.54, 0.4, 0.1)
 	SetFont(WorldMapTextFont,        BOLDITALIC, 31, "THICKOUTLINE",  40, nil, nil, 0, 0, 0, 1, -1)
 
+  -- I have no idea why the channel list is getting fucked up
+  -- but re-setting the font obj seems to fix it
+  for i=1,MAX_CHANNEL_BUTTONS do
+    local f = _G["ChannelButton"..i.."Text"]
+    f:SetFontObject(GameFontNormalSmallLeft)
+    -- function f:SetFont(...) error("Attempt to set font on ChannelButton"..i) end
+  end
+
 	for i=1,7 do
 		local f = _G["ChatFrame"..i]
 		local font, size = f:GetFont()
