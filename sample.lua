@@ -12,32 +12,9 @@ frame:SetScript("OnShow", function(self)
 	group:SetPoint("BOTTOMRIGHT", -16, 16)
 
 	local GAP = 5
-	local scroll = CreateFrame("ScrollFrame", nil, group)
-	scroll:SetPoint("TOPRIGHT", -GAP, -GAP)
-	scroll:SetPoint("BOTTOMLEFT", GAP, GAP)
-
-	local frame = CreateFrame("Frame", nil, scroll)
-	scroll:SetScrollChild(frame)
-	frame:SetPoint("TOP")
-	frame:SetPoint("LEFT")
-	frame:SetPoint("RIGHT")
-	frame:SetHeight(1000)
-
-	local scrollbar, upbutt, downbutt = LibStub("tekKonfig-Scroll").new(group, 6)
-	scrollbar:SetMinMaxValues(0,550)
-	scrollbar:SetValue(0)
-
-	local f = scrollbar:GetScript("OnValueChanged")
-	scrollbar:SetScript("OnValueChanged", function(self, value, ...)
-		scroll:SetVerticalScroll(value)
-		frame:SetPoint("TOP", 0, value)
-		return f(self, value, ...)
-	end)
-
-	local offset = 0
-	scroll:UpdateScrollChildRect()
-	scroll:EnableMouseWheel(true)
-	scroll:SetScript("OnMouseWheel", function(self, val) scrollbar:SetValue(scrollbar:GetValue() - val*50) end)
+	local frame = CreateFrame("Frame", nil, group)
+	frame:SetPoint("TOPRIGHT", -GAP, -GAP)
+	frame:SetPoint("BOTTOMLEFT", GAP, GAP)
 
 	local last
 	local fonts, needbackground = {
@@ -98,9 +75,9 @@ frame:SetScript("OnShow", function(self)
 	for i,font in pairs(fonts) do
 		local fs = frame:CreateFontString(nil, "ARTWORK", font)
 		if i == 1 then
-			fs:SetPoint("TOPLEFT", frame, "TOPLEFT", 5, -5)
+			fs:SetPoint("TOPLEFT", frame, "TOPLEFT", 30, -15)
 		elseif i == 21 then
-			fs:SetPoint("TOPLEFT", frame, "TOP", 5, -5)
+			fs:SetPoint("TOPLEFT", frame, "TOP", 30, -15)
 		else
 			fs:SetPoint("TOPLEFT", last, "BOTTOMLEFT", 0, -4)
 		end
