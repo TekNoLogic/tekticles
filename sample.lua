@@ -56,13 +56,6 @@ frame:SetScript("OnShow", function(self)
 		"NumberFontNormalHuge",
 		"ChatFontNormal",
 		"ChatFontSmall",
-		"QuestTitleFont",
-		"QuestFont",
-		"QuestFontNormalSmall",
-		"QuestFontHighlight",
-		"ItemTextFontNormal",
-		"MailTextFontNormal",
-		"SubSpellFont",
 		"DialogButtonNormalText",
 		"ZoneTextFont",
 		"SubZoneTextFont",
@@ -74,8 +67,6 @@ frame:SetScript("OnShow", function(self)
 		"GameTooltipTextSmall",
 		"GameTooltipHeaderText",
 		"WorldMapTextFont",
-		"InvoiceTextFontNormal",
-		"InvoiceTextFontSmall",
 		"CombatTextFont",
 		"MovieSubtitleFont",
 		"AchievementPointsFont",
@@ -84,6 +75,15 @@ frame:SetScript("OnShow", function(self)
 		"AchievementCriteriaFont",
 		"AchievementDateFont",
 		"ReputationDetailFont",
+		"QuestTitleFont",
+		"QuestFont",
+		"QuestFontNormalSmall",
+		"QuestFontHighlight",
+		"ItemTextFontNormal",
+		"MailTextFontNormal",
+		"SubSpellFont",
+		"InvoiceTextFontNormal",
+		"InvoiceTextFontSmall",
 	}, {
 		QuestFont = true,
 		QuestFontNormalSmall = true,
@@ -97,12 +97,19 @@ frame:SetScript("OnShow", function(self)
 	}
 	for i,font in pairs(fonts) do
 		local fs = frame:CreateFontString(nil, "ARTWORK", font)
-		fs:SetPoint("TOP", last or frame, last and "BOTTOM" or "TOP", 0, last and -4 or 0)
+		if i == 1 then
+			fs:SetPoint("TOPLEFT", frame, "TOPLEFT", 5, -5)
+		elseif i == 21 then
+			fs:SetPoint("TOPLEFT", frame, "TOP", 5, -5)
+		else
+			fs:SetPoint("TOPLEFT", last, "BOTTOMLEFT", 0, -4)
+		end
 		fs:SetText(font)
 		if needbackground[font] then
 			local tex = frame:CreateTexture(nil, "ARTWORK")
-			tex:SetPoint("TOPRIGHT", fs)
-			tex:SetPoint("BOTTOMLEFT", fs)
+			tex:SetPoint("TOPLEFT", fs, -2, 2)
+			tex:SetPoint("BOTTOM", fs, 0, -2)
+			tex:SetWidth(150)
 			tex:SetTexture("Interface\\ChatFrame\\ChatFrameBackground")
 			tex:SetVertexColor(.8,.8,.8)
 		end
