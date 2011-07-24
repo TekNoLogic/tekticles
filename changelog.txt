@@ -1,3 +1,7 @@
+4.2.0.13-Beta
+    2 column config panel now, woo!
+    Remove delayed load, we really do want the fonts applied at load
+
 4.1.0.12-Beta
     Fix channel list buttons not getting fonts
     Fix title picker buttons in 4.1
