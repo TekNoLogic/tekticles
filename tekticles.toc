@@ -9,9 +9,6 @@
 ## X-Credits: ClearFont2 by Kirkburn
 ## X-Category: Interface Enhancements
 
-## LoadManagers: AddonLoader
-## X-LoadOn-Always: delayed
-
 ## OptionalDeps: LibSharedMedia-3.0
 
 LibStub.lua

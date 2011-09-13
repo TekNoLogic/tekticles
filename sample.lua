@@ -12,32 +12,9 @@ frame:SetScript("OnShow", function(self)
 	group:SetPoint("BOTTOMRIGHT", -16, 16)
 
 	local GAP = 5
-	local scroll = CreateFrame("ScrollFrame", nil, group)
-	scroll:SetPoint("TOPRIGHT", -GAP, -GAP)
-	scroll:SetPoint("BOTTOMLEFT", GAP, GAP)
-
-	local frame = CreateFrame("Frame", nil, scroll)
-	scroll:SetScrollChild(frame)
-	frame:SetPoint("TOP")
-	frame:SetPoint("LEFT")
-	frame:SetPoint("RIGHT")
-	frame:SetHeight(1000)
-
-	local scrollbar, upbutt, downbutt = LibStub("tekKonfig-Scroll").new(group, 6)
-	scrollbar:SetMinMaxValues(0,550)
-	scrollbar:SetValue(0)
-
-	local f = scrollbar:GetScript("OnValueChanged")
-	scrollbar:SetScript("OnValueChanged", function(self, value, ...)
-		scroll:SetVerticalScroll(value)
-		frame:SetPoint("TOP", 0, value)
-		return f(self, value, ...)
-	end)
-
-	local offset = 0
-	scroll:UpdateScrollChildRect()
-	scroll:EnableMouseWheel(true)
-	scroll:SetScript("OnMouseWheel", function(self, val) scrollbar:SetValue(scrollbar:GetValue() - val*50) end)
+	local frame = CreateFrame("Frame", nil, group)
+	frame:SetPoint("TOPRIGHT", -GAP, -GAP)
+	frame:SetPoint("BOTTOMLEFT", GAP, GAP)
 
 	local last
 	local fonts, needbackground = {
@@ -56,13 +33,6 @@ frame:SetScript("OnShow", function(self)
 		"NumberFontNormalHuge",
 		"ChatFontNormal",
 		"ChatFontSmall",
-		"QuestTitleFont",
-		"QuestFont",
-		"QuestFontNormalSmall",
-		"QuestFontHighlight",
-		"ItemTextFontNormal",
-		"MailTextFontNormal",
-		"SubSpellFont",
 		"DialogButtonNormalText",
 		"ZoneTextFont",
 		"SubZoneTextFont",
@@ -74,8 +44,6 @@ frame:SetScript("OnShow", function(self)
 		"GameTooltipTextSmall",
 		"GameTooltipHeaderText",
 		"WorldMapTextFont",
-		"InvoiceTextFontNormal",
-		"InvoiceTextFontSmall",
 		"CombatTextFont",
 		"MovieSubtitleFont",
 		"AchievementPointsFont",
@@ -84,6 +52,15 @@ frame:SetScript("OnShow", function(self)
 		"AchievementCriteriaFont",
 		"AchievementDateFont",
 		"ReputationDetailFont",
+		"QuestTitleFont",
+		"QuestFont",
+		"QuestFontNormalSmall",
+		"QuestFontHighlight",
+		"ItemTextFontNormal",
+		"MailTextFontNormal",
+		"SubSpellFont",
+		"InvoiceTextFontNormal",
+		"InvoiceTextFontSmall",
 	}, {
 		QuestFont = true,
 		QuestFontNormalSmall = true,
@@ -97,12 +74,19 @@ frame:SetScript("OnShow", function(self)
 	}
 	for i,font in pairs(fonts) do
 		local fs = frame:CreateFontString(nil, "ARTWORK", font)
-		fs:SetPoint("TOP", last or frame, last and "BOTTOM" or "TOP", 0, last and -4 or 0)
+		if i == 1 then
+			fs:SetPoint("TOPLEFT", frame, "TOPLEFT", 30, -15)
+		elseif i == 21 then
+			fs:SetPoint("TOPLEFT", frame, "TOP", 30, -15)
+		else
+			fs:SetPoint("TOPLEFT", last, "BOTTOMLEFT", 0, -4)
+		end
 		fs:SetText(font)
 		if needbackground[font] then
 			local tex = frame:CreateTexture(nil, "ARTWORK")
-			tex:SetPoint("TOPRIGHT", fs)
-			tex:SetPoint("BOTTOMLEFT", fs)
+			tex:SetPoint("TOPLEFT", fs, -2, 2)
+			tex:SetPoint("BOTTOM", fs, 0, -2)
+			tex:SetWidth(150)
 			tex:SetTexture("Interface\\ChatFrame\\ChatFrameBackground")
 			tex:SetVertexColor(.8,.8,.8)
 		end
