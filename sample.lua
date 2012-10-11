@@ -37,6 +37,8 @@ frame:SetScript("OnShow", function(self)
 		"ZoneTextFont",
 		"SubZoneTextFont",
 		"PVPInfoTextFont",
+		"QuestFont_Super_Huge",
+		"QuestFont_Shadow_Small",
 		"ErrorFont",
 		"TextStatusBarText",
 		"CombatLogFont",
@@ -76,7 +78,7 @@ frame:SetScript("OnShow", function(self)
 		local fs = frame:CreateFontString(nil, "ARTWORK", font)
 		if i == 1 then
 			fs:SetPoint("TOPLEFT", frame, "TOPLEFT", 30, -15)
-		elseif i == 21 then
+		elseif i == 23 then
 			fs:SetPoint("TOPLEFT", frame, "TOP", 30, -15)
 		else
 			fs:SetPoint("TOPLEFT", last, "BOTTOMLEFT", 0, -4)
