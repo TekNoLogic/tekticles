@@ -1,3 +1,6 @@
+5.0.1.14-Beta
+    Seems we have some new fonts in game that need to be set
+
 4.2.0.13-Beta
     2 column config panel now, woo!
     Remove delayed load, we really do want the fonts applied at load
