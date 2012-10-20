@@ -26,6 +26,7 @@ frame:SetScript("OnShow", function(self)
 		"GameFontHighlightMedium",
 		"GameFontNormalLarge",
 		"GameFontNormalHuge",
+		"GameFont_Gigantic",
 		"BossEmoteNormalHuge",
 		"NumberFontNormal",
 		"NumberFontNormalSmall",
