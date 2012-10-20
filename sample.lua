@@ -11,6 +11,18 @@ frame:SetScript("OnShow", function(self)
 	group:SetPoint("BOTTOMLEFT", 16, 16)
 	group:SetPoint("BOTTOMRIGHT", -16, 16)
 
+
+	local tex = group:CreateTexture(nil, "BACKGROUND")
+	tex:SetTexture("Interface\\FrameGeneral\\UI-Background-Rock")
+	tex:SetPoint("TOPLEFT", 4, -4)
+	tex:SetPoint("BOTTOMRIGHT", -4, 4)
+
+	local alpha = group:CreateTexture(nil, "BACKGROUND")
+	alpha:SetTexture(1, 1, 1, 0.5)
+	alpha:SetBlendMode('ADD')
+	alpha:SetAllPoints(tex)
+
+
 	local GAP = 5
 	local frame = CreateFrame("Frame", nil, group)
 	frame:SetPoint("TOPRIGHT", -GAP, -GAP)
@@ -90,8 +102,8 @@ frame:SetScript("OnShow", function(self)
 			tex:SetPoint("TOPLEFT", fs, -2, 2)
 			tex:SetPoint("BOTTOM", fs, 0, -2)
 			tex:SetWidth(150)
-			tex:SetTexture("Interface\\ChatFrame\\ChatFrameBackground")
-			tex:SetVertexColor(.8,.8,.8)
+			tex:SetTexture(1, 1, 1, 0.4)
+			tex:SetBlendMode('ADD')
 		end
 		last = fs
 	end
