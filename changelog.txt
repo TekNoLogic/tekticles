@@ -1,3 +1,7 @@
+5.0.1.15-Beta
+    New fonts
+    Improve the background of the config page
+
 5.0.1.14-Beta
     Seems we have some new fonts in game that need to be set
 
