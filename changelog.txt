@@ -1,3 +1,11 @@
+5.1.0.16-Release
+    Tagging release version
+commit f41cdeb15bd570d3abfe7e33783466eaaa102769
+Author: tekkub :bear:  <tekkub@gmail.com>
+Date:   Mon Dec 24 02:04:50 2012 -0700
+
+    Updating TOC to 50100
+
 5.0.1.15-Beta
     New fonts
     Improve the background of the config page
