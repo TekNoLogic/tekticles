@@ -5,14 +5,12 @@
 ## Author: Tekkub Stoutwrithe
 ## Version: Alpha
 ## X-Website: http://www.tekkub.net/
-## X-Email: tekkub-wow@googlegroups.com
 ## X-Credits: ClearFont2 by Kirkburn
 ## X-Category: Interface Enhancements
 
 ## OptionalDeps: LibSharedMedia-3.0
 
 LibStub.lua
-tekKonfigAboutPanel.lua
 tekKonfigHeading.lua
 tekKonfigGroup.lua
 tekKonfigScroll.lua
