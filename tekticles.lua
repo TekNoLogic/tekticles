@@ -1,4 +1,4 @@
-﻿
+
 local function SetFont(obj, font, size, style, r, g, b, sr, sg, sb, sox, soy)
 	obj:SetFont(font, size, style)
 	if sr and sg and sb then obj:SetShadowColor(sr, sg, sb) end
@@ -32,6 +32,7 @@ f:SetScript("OnEvent", function()
 	SetFont(FriendsFont_UserText,               NUMBER, 12, nil, nil, nil, nil, 0, 0, 0, 1, -1)
 	SetFont(GameTooltipHeader,                    BOLD, 15, "OUTLINE")
 	SetFont(GameFont_Gigantic,                    BOLD, 32, nil, nil, nil, nil, 0, 0, 0, 1, -1)
+	SetFont(GameNormalNumberFont,                 BOLD, 11)
 	SetFont(InvoiceFont_Med,                    ITALIC, 13, nil, 0.15, 0.09, 0.04)
 	SetFont(InvoiceFont_Small,                  ITALIC, 11, nil, 0.15, 0.09, 0.04)
 	SetFont(MailFont_Large,                     ITALIC, 15, nil, 0.15, 0.09, 0.04, 0.54, 0.4, 0.1, 1, -1)
@@ -68,6 +69,7 @@ f:SetScript("OnEvent", function()
 	SetFont(SystemFont_Tiny,                    NORMAL, 11)
 	SetFont(Tooltip_Med,                        NORMAL, 13)
 	SetFont(Tooltip_Small,                        BOLD, 12)
+	SetFont(WhiteNormalNumberFont,                BOLD, 11)
 
 	-- Derived fonts
 	SetFont(BossEmoteNormalHuge,     BOLDITALIC, 27, "THICKOUTLINE")

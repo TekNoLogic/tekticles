@@ -1,4 +1,4 @@
-﻿
+
 local frame = CreateFrame("ScrollFrame", nil, InterfaceOptionsFramePanelContainer)
 frame.name = "tekticles"
 frame:Hide()
@@ -34,6 +34,8 @@ frame:SetScript("OnShow", function(self)
 		"GameFontHighlight",
 		"GameFontDisable",
 		"GameFontNormalSmall",
+		"WhiteNormalNumberFont",
+		"GameNormalNumberFont",
 		"GameFontHighlightExtraSmall",
 		"GameFontHighlightMedium",
 		"GameFontNormalLarge",
