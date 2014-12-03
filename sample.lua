@@ -52,6 +52,7 @@ frame:SetScript("OnShow", function(self)
 		"ZoneTextFont",
 		"SubZoneTextFont",
 		"PVPInfoTextFont",
+		"QuestFont_Huge",
 		"QuestFont_Super_Huge",
 		"QuestFont_Shadow_Small",
 		"ErrorFont",
