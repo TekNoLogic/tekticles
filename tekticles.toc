@@ -17,3 +17,6 @@ tekKonfigScroll.lua
 
 tekticles.lua
 sample.lua
+
+
+## SavedVariables:        tekticles_options

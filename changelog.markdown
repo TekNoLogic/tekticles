@@ -4,4 +4,5 @@ spiralofhope's changes:
 
 - Error fix for Shadowlands beta (9.x)
   -  I have no idea what's going on with that, but I just hacked out some code and it works now.
-
+- Implemented a preference for the font to be used, so I can remove bold from numbers.
+  -  This opens the way to have an options panel.
