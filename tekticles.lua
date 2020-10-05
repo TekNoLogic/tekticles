@@ -71,7 +71,7 @@ if arg1 ~= name then return end
 	SetFont(SystemFont_Shadow_Med1,             NORMAL, 13)
 	SetFont(SystemFont_Shadow_Med2,             NORMAL, 14)
 	SetFont(SystemFont_Shadow_Med3,             NORMAL, 15)
-	SetFont(SystemFont_Shadow_Outline_Huge2,    NORMAL, 22, "OUTLINE")
+	--SetFont(SystemFont_Shadow_Outline_Huge2,    NORMAL, 22, "OUTLINE")
 	SetFont(SystemFont_Shadow_Small,              BOLD, 11)
 	SetFont(SystemFont_Small,                   NORMAL, 12)
 	SetFont(SystemFont_Tiny,                    NORMAL, 11)
