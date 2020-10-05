@@ -87,11 +87,13 @@ f:SetScript("OnEvent", function()
 
 	-- I have no idea why the channel list is getting fucked up
 	-- but re-setting the font obj seems to fix it
-	for i=1,MAX_CHANNEL_BUTTONS do
-		local f = _G["ChannelButton"..i.."Text"]
-		f:SetFontObject(GameFontNormalSmallLeft)
-		-- function f:SetFont(...) error("Attempt to set font on ChannelButton"..i) end
-	end
+  -- See issue #18
+  -- https://github.com/TekNoLogic/tekticles/issues/18
+	--for i=1,GetNumDisplayChannels() do
+		--local f = _G["ChannelButton"..i.."Text"]
+		--f:SetFontObject(GameFontNormalSmallLeft)
+		---- function f:SetFont(...) error("Attempt to set font on ChannelButton"..i) end
+	--end
 
 	for _,butt in pairs(PaperDollTitlesPane.buttons) do butt.text:SetFontObject(GameFontHighlightSmallLeft) end
 end)
