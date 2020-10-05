@@ -8,9 +8,12 @@ local function SetFont(obj, font, size, style, r, g, b, sr, sg, sb, sox, soy)
 end
 
 
+local name, addon = ...
 local f = CreateFrame("Frame")
 f:RegisterEvent("ADDON_LOADED")
-f:SetScript("OnEvent", function()
+f:SetScript("OnEvent", function(self, event, arg1, ...)
+if arg1 ~= name then return end
+
 	local NORMAL     = "Interface\\AddOns\\tekticles\\Calibri.ttf"
 	local BOLD       = "Interface\\AddOns\\tekticles\\CalibriBold.ttf"
 	local BOLDITALIC = "Interface\\AddOns\\tekticles\\CalibriBoldItalic.ttf"
@@ -18,11 +21,13 @@ f:SetScript("OnEvent", function()
 	local NUMBER     = "Interface\\AddOns\\tekticles\\CalibriBold.ttf"
 
 	UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT = 12
-	CHAT_FONT_HEIGHTS = {7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24}
+	CHAT_FONT_HEIGHTS = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24}
 
-	UNIT_NAME_FONT     = NORMAL
-	DAMAGE_TEXT_FONT   = NUMBER
-	STANDARD_TEXT_FONT = NORMAL
+	UNIT_NAME_FONT           = NORMAL
+	DAMAGE_TEXT_FONT         = NUMBER
+	STANDARD_TEXT_FONT       = NORMAL
+	NAMEPLATE_FONT           = NORMAL
+	NAMEPLATE_SPELLCAST_FONT = NORMAL
 
 	-- Base fonts
 	SetFont(AchievementFont_Small,                BOLD, 12)
@@ -31,6 +36,8 @@ f:SetScript("OnEvent", function()
 	SetFont(FriendsFont_Small,                  NORMAL, 11, nil, nil, nil, nil, 0, 0, 0, 1, -1)
 	SetFont(FriendsFont_UserText,               NUMBER, 12, nil, nil, nil, nil, 0, 0, 0, 1, -1)
 	SetFont(GameTooltipHeader,                    BOLD, 15, "OUTLINE")
+	SetFont(GameFontWhite,                      NORMAL, 13) -- legion nameplates
+	SetFont(GameFontWhiteTiny,                  NORMAL, 11) -- legion nameplates
 	SetFont(GameFont_Gigantic,                    BOLD, 32, nil, nil, nil, nil, 0, 0, 0, 1, -1)
 	SetFont(GameNormalNumberFont,                 BOLD, 11)
 	SetFont(InvoiceFont_Med,                    ITALIC, 13, nil, 0.15, 0.09, 0.04)
@@ -78,6 +85,9 @@ f:SetScript("OnEvent", function()
 	SetFont(ErrorFont,                   ITALIC, 16, nil, 60)
 	SetFont(QuestFontNormalSmall,          BOLD, 13, nil, nil, nil, nil, 0.54, 0.4, 0.1)
 	SetFont(WorldMapTextFont,        BOLDITALIC, 31, "THICKOUTLINE",  40, nil, nil, 0, 0, 0, 1, -1)
+	SetFont(SystemFont_NamePlate,        NORMAL, 12, "OUTLINE") -- legion nameplates
+	SetFont(SystemFont_LargeNamePlate,   NORMAL, 16, "OUTLINE") -- legion nameplates
+	SetFont(SystemFont_NamePlateCastBar, NUMBER, 14, "OUTLINE") -- legion nameplates
 
 	for i=1,7 do
 		local f = _G["ChatFrame"..i]
