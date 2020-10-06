@@ -1,9 +1,9 @@
-## Interface: 60000
+## Interface:             80300
+## Version:               8.0.1.2
 
 ## Title: tekticles
 ## Notes: Simple font replacement
 ## Author: Tekkub Stoutwrithe
-## Version: Alpha
 ## X-Website: http://www.tekkub.net/
 ## X-Credits: ClearFont2 by Kirkburn
 ## X-Category: Interface Enhancements
@@ -17,3 +17,6 @@ tekKonfigScroll.lua
 
 tekticles.lua
 sample.lua
+
+
+## SavedVariables:        tekticles_options
