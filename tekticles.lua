@@ -60,11 +60,11 @@ f:SetScript("OnEvent", function()
 	SetFont(SystemFont_Outline_Small,           NUMBER, 13, "OUTLINE")
 	SetFont(SystemFont_Shadow_Huge1,              BOLD, 20)
 	SetFont(SystemFont_Shadow_Huge3,              BOLD, 25)
-	SetFont(SystemFont_Shadow_Large,            NORMAL, 17)
+	--SetFont(SystemFont_Shadow_Large,            NORMAL, 17)
 	SetFont(SystemFont_Shadow_Med1,             NORMAL, 13)
 	SetFont(SystemFont_Shadow_Med2,             NORMAL, 14)
 	SetFont(SystemFont_Shadow_Med3,             NORMAL, 15)
-	SetFont(SystemFont_Shadow_Outline_Huge2,    NORMAL, 22, "OUTLINE")
+	--SetFont(SystemFont_Shadow_Outline_Huge2,    NORMAL, 22, "OUTLINE")
 	SetFont(SystemFont_Shadow_Small,              BOLD, 11)
 	SetFont(SystemFont_Small,                   NORMAL, 12)
 	SetFont(SystemFont_Tiny,                    NORMAL, 11)
@@ -87,11 +87,11 @@ f:SetScript("OnEvent", function()
 
 	-- I have no idea why the channel list is getting fucked up
 	-- but re-setting the font obj seems to fix it
-	for i=1,MAX_CHANNEL_BUTTONS do
-		local f = _G["ChannelButton"..i.."Text"]
-		f:SetFontObject(GameFontNormalSmallLeft)
-		-- function f:SetFont(...) error("Attempt to set font on ChannelButton"..i) end
-	end
+	-- for i=1,MAX_CHANNEL_BUTTONS do
+	-- 	local f = _G["ChannelButton"..i.."Text"]
+	-- 	f:SetFontObject(GameFontNormalSmallLeft)
+	-- 	-- function f:SetFont(...) error("Attempt to set font on ChannelButton"..i) end
+	-- end
 
 	for _,butt in pairs(PaperDollTitlesPane.buttons) do butt.text:SetFontObject(GameFontHighlightSmallLeft) end
 end)
